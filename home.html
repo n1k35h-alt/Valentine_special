@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Valentine’s Day ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container fade">
+        <h1>Happy Valentine’s Day and Happy 2-year anniversary❤️</h1>
+        <p id="type">
+
+            To the most beautiful, most lovable, and most special girl in my life.
+            This little website is just for you.
+        </p>
+        <a href="memories.html" class="btn">Continue 💕</a>
+    </div>
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%">💖</div>
+<div class="heart" style="left:50%">💘</div>
+<div class="heart" style="left:70%">❤️</div>
+<div class="heart" style="left:90%">💖</div>
+ <script>
+     const text = "You are my today, my tomorrow, and my always ❤️";
+     let i = 0;
+
+     function typeWriter() {
+     if (i < text.length) {
+        document.getElementById("type").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80);
+     }
+}
+typeWriter();
+ </script>
+
+</body>
+</html>

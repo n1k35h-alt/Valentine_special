@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lock-box {
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(255,255,255,0.85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="lock-box fade">
+    <h1>🔒 Private</h1>
+    <p>If you know the password, you already own my heart ❤️</p>
+   
+</p>
+
+
+    <input type="password" id="password" placeholder="Enter the secret password">
+
+    <button class="btn" onclick="checkPassword()">Unlock 💖</button>
+
+    <p class="error" id="error">Wrong password 😢</p>
+    <p id="hint" style="display:none; font-size:0.9rem; color:#666; margin-top:15px;">
+    Hint: The exact date when we officially became us ❤️
+</p>
+
+<p style="cursor:pointer; color:#d6336c; margin-top:10px;"
+   onclick="showHint()">
+   Need a hint? 👀
+</p>
+
+</div>
+
+<script>
+function checkPassword() {
+    const correctPassword = "2081falgun2"; // 🔴 CHANGE THIS
+    const enteredPassword = document.getElementById("password").value;
+
+    if (enteredPassword === correctPassword) {
+        window.location.href = "home.html";
+    } else {
+        document.getElementById("error").style.display = "block";
+    }
+}
+function showHint() {
+    document.getElementById("hint").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
